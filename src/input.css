@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+    @apply text-black text-[19px] font-[500] relative before:content-[''] before:absolute before:transition-all before:duration-300 before:-bottom-1 before:left-0 before:w-0 before:h-[2px] before:bg-main-color hover:before:w-full;
+  }
+  .btn {
+    @apply px-6 py-2 rounded-full border-2 text-[18px] border-main-color transition duration-500 capitalize font-normal hover:bg-main-color hover:text-white hover:scale-[1.1];
+  }
+  .socialIcon {
+    @apply cursor-pointer transition duration-300 w-[40px] h-[40px] flex justify-center items-center bg-purple-color p-3 rounded-full text-white hover:bg-main-color hover:scale-[1.1]  cursor-pointer transition duration-300 w-[40px] h-[40px] flex justify-center items-center bg-purple-color p-3 rounded-full text-white hover:bg-main-color hover:scale-[1.1];
+  }
+}
+.header {
+  background-image: url(../src/img/background.jpg);
+}
+.portofolio .box::before {
+  content: "";
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  opacity: 0.8;
+}
+.portofolio .box:hover::before {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, #191919);
+}
+.faq .container {
+  background-image: url(../src/img/intro.png);
+}
+body::-webkit-scrollbar {
+  width: 1em;
+  background-color: #110726;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(247 80 35 / 1);
+  box-shadow: 0px 0px 30px 30px rgb(247 80 35 / 1);
+}
